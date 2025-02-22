@@ -22,7 +22,7 @@
   font-weight: bold;
 }
 
-.tr:nth-child(even) {
+.trb {
   background-color: #878686;
 }
 
