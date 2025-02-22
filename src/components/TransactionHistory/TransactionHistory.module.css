@@ -1,0 +1,36 @@
+.table {
+  margin: auto;
+  margin-bottom: 20px;
+  border: 2px solid #000;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.tr {
+  background-color: rgb(38, 38, 38);
+}
+
+.th,
+.td {
+  border: 1px solid #000000;
+  background-color: white;
+  padding: 5px 70px;
+}
+
+.th {
+  background-color: #1d1d20;
+  font-weight: bold;
+}
+
+.tr:nth-child(even) {
+  background-color: #878686;
+}
+
+.thead {
+  background-color: #222225;
+  color: white;
+}
+
+.tdp::first-letter {
+  text-transform: uppercase;
+}
