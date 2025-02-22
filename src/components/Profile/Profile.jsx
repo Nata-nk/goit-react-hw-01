@@ -1,6 +1,4 @@
 import css from "./Profile.module.css";
-import ProfileStats from "../ProfileStats/ProfileStats";
-import ProfileInfo from "../ProfileInfo/ProfileInfo";
 
 export default function Profile({
   name,
@@ -11,8 +9,26 @@ export default function Profile({
 }) {
   return (
     <div className={css.box}>
-      <ProfileInfo name={name} tag={tag} location={location} image={image} />
-      <ProfileStats followers={followers} views={views} likes={likes} />
+      <div className={css.container}>
+        <img className={css.img} src={image} alt="User avatar" />
+        <p className={css.textName}>{name}</p>
+        <p className={css.textTag}>@{tag}</p>
+        <p className={css.text}>{location}</p>
+      </div>
+      <ul className={css.list}>
+        <li className={css.item}>
+          <span>Followers</span>
+          <span className={css.span}>{followers}</span>
+        </li>
+        <li className={css.item}>
+          <span>Views</span>
+          <span className={css.span}>{views}</span>
+        </li>
+        <li className={css.item}>
+          <span>Likes</span>
+          <span className={css.span}>{likes}</span>
+        </li>
+      </ul>
     </div>
   );
 }
